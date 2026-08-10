@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>judwaa 3</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+
+    
+    .container {
+      display: flex;
+      width: 1050px;
+    }
+
+    .leftist {
+      width: 220px;
+      padding: 10px;
+      border-right: 1px solid #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+    }
+
+    .beechmei {
+      width: 530px;
+      border-right: 1px solid #333;
+      min-height: 100vh;
+    }
+
+    .rightist {
+      width: 300px;
+      padding: 10px;
+    }
+
+    
+    .icon {
+      width: 20px;
+      height: 20px;
+      filter: invert(1);
+    }
+
+    .badge {
+      width: 16px;
+      height: 16px;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .butt {
+      background-color: white;
+      color: black;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .proff {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      margin-top: auto;
+    }
+
+    
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 1px solid #333;
+    }
+
+    .tab {
+      padding: 15px 10px;
+      font-size: 14px;
+      color: gray;
+      cursor: pointer;
+      text-align: center;
+    }
+
+/* actually spelled out as "chosen one" */
+    .chosenone {
+      color: white;
+      font-weight: bold;
+      border-bottom: 3px solid #1d9bf0;
+    }
+
+    
+    .posting {
+      padding: 15px;
+      border-bottom: 1px solid #333;
+      display: flex;
+      gap: 12px;
+    }
+
+    .post {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 18px;
+      outline: none;
+      margin-top: 8px;
+    }
+
+    /* goat ka tweet */
+    .dabba1 {
+      padding: 15px;
+      border-bottom: 1px solid #333;
+    }
+
+    .goat {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    /* tweet ke andar tweer */
+    .dabba2 {
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 12px;
+      margin-top: 10px;
+    }
+
+    .dabba3 {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .post-image {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    .post-stats {
+      display: flex;
+      justify-content: space-between;
+      color: gray;
+      font-size: 13px;
+      margin-top: 12px;
+    }
+
+    
+    .card {
+      background-color: #15181c;
+      padding: 15px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .blue-btn {
+      background-color: #1d9bf0;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 15px;
+      background-color: #202327;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .news-item, .trend-item {
+      margin-bottom: 14px;
+    }
+
+    .news-title {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.3;
+    }
+
+    .sub {
+      font-size: 12px;
+      color: gray;
+      margin-top: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- left ka -->
+    <div class="leftist">
+      <div>
+        <div class="menu"><img src="x-icon.svg" class="icon"></div>
+        <div class="menu"><img src="home.png" class="icon"> <strong>Home</strong></div>
+        <div class="menu"><img src="explore.svg" class="icon"> Explore</div>
+        <div class="menu"><img src="notifications.svg" class="icon"> Notifications</div>
+        <div class="menu"><img src="follow.svg" class="icon"> Follow</div>
+        <div class="menu"><img src="chat.svg" class="icon"> Chat</div>
+        <div class="menu"><img src="grok.svg" class="icon"> Grok</div>
+        <div class="menu"><img src="studio.svg" class="icon"> Creator Studio</div>
+        <div class="menu"><img src="premium.svg" class="icon"> Premium</div>
+        <div class="menu"><img src="profile.svg" class="icon"> Profile</div>
+        <div class="menu"><img src="more.svg" class="icon"> More</div>
+        <!-- posting -->
+        <button class="butt">Post</button>
+      </div>
+
+      <!-- humari profile -->
+      <div class="proff">
+        <img src="oss.png" class="avatar">
+        <div>
+          <div style="font-size: 14px; font-weight: bold;">aitoss <img src="blue_verfied.svg" class="badge"></div>
+          <div class="sub">@aitoss</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- doomscrolling -->
+    <div class="beechmei">
+      <div class="tabs">
+        <div class="tab chosenone">For you</div>
+        <div class="tab">Following</div>
+        <div class="tab">Politics</div>
+        <div class="tab">Gaming</div>
+        <div class="tab">Movies & TV</div>
+      </div>
+
+      <!-- humari post karneki jagah -->
+      <div class="posting">
+        <img src="oss.png" class="avatar">
+        <input type="text" placeholder="What's happening?" class="post">
+      </div>
+
+      <!-- the king has awaken -->
+      <div class="dabba1">
+        <div class="goat">
+          <img src="elcursed.png" class="avatar">
+          <strong>Elon Musk</strong>
+          <img src="blue_verfied.svg" class="badge">
+          <span class="sub">@elonmusk · 21h</span>
+        </div>
+        <p style="margin-top: 8px;">Slavery was ended primarily by Britain</p>
+
+        <div class="dabba2">
+          <div class="dabba3">
+            <strong>iamyesyouareno</strong>
+            <img src="blue_verfied.svg" class="badge">
+            <span class="sub">@iamyesyouareno · Aug 3</span>
+          </div>
+          <p style="font-size: 14px; margin-top: 5px;">The inconvenient truth.</p>
+          <img src="post.png" class="post-image">
+        </div>
+
+       
+      </div>
+    </div>
+
+    <!-- right -->
+    <div class="rightist">
+      <input type="text" placeholder="Search" class="search-input">
+
+      <!-- inki ads nhi rukti -->
+      <div class="card">
+        <h3>Subscribe to Premium</h3>
+        <p class="sub" style="line-height: 1.4;">Get rid of ads, see your analytics, boost your replies and unlock 20+ features.</p>
+        <button class="blue-btn">Subscribe</button>
+      </div>
+
+      <!-- samaachar -->
+      <div class="card">
+        <h3>Today's News</h3>
+        
+        <div class="news-item">
+          <div class="news-title">Yash's 'Toxic' Trailer Countdown Builds Intense Buzz</div>
+          <div class="sub">2 days ago · Entertainment · 10.3K posts</div>
+        </div>
+
+        <div class="news-item">
+          <div class="news-title">Rajya Sabha Erupts Over Ram Temple Donation Theft Allegations</div>
+          <div class="sub">Trending now · News · 859 posts</div>
+        </div>
+
+        <div class="news-item">
+          <div class="news-title">Delhi Police Uncover Fake Accounts in CJP Protest Probe</div>
+          <div class="sub">Trending now · News · 1,741 posts</div>
+        </div>
+      </div>
+
+      <!-- kya hua bacha? call karun? -->
+      <div class="card">
+        <h3>What's happening</h3>
+
+        <div class="trend-item">
+          <div class="sub">Entertainment · Trending</div>
+          <div class="news-title">#MalavikaMohanan</div>
+        </div>
+
+        <div class="trend-item">
+          <div class="sub">Trending in India</div>
+          <div class="news-title">#IndiGo20</div>
+        </div>
+
+        <div class="trend-item">
+          <div class="sub">Politics · Trending</div>
+          <div class="news-title">#गौमाता_राष्ट्रमाता</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
